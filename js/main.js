@@ -79,42 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ──────────────────────────────────────────────
-  // 7. Parallax Effect
-  // ──────────────────────────────────────────────
-  const handleParallax = () => {
-    // Disable parallax on mobile for performance
-    if (window.innerWidth < 768) return;
-
-    const scrollY = window.scrollY;
-
-    if (hero) {
-      hero.style.backgroundPositionY = `${scrollY * 0.4}px`;
-    }
-
-    if (ctaBanner) {
-      const rect = ctaBanner.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        const offset = (rect.top - window.innerHeight) * 0.3;
-        ctaBanner.style.backgroundPositionY = `${offset}px`;
-      }
-    }
-
-    if (reserveBanner) {
-      const rect = reserveBanner.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        const offset = (rect.top - window.innerHeight) * 0.3;
-        reserveBanner.style.backgroundPositionY = `${offset}px`;
-      }
-    }
-  };
-
-  // ──────────────────────────────────────────────
   // Combined throttled scroll handler
   // ──────────────────────────────────────────────
   const onScroll = rafThrottle(() => {
     handleNavbarScroll();
     handleWhatsappVisibility();
-    handleParallax();
   });
 
   window.addEventListener('scroll', onScroll, { passive: true });

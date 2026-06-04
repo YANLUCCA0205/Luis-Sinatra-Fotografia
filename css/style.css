@@ -312,6 +312,26 @@ button {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* Transparent navbar overrides */
+@media (min-width: 768px) {
+  .navbar:not(.scrolled) .nav-links li a {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .navbar:not(.scrolled) .nav-links li a::after {
+    background: #FFFFFF;
+  }
+  .navbar:not(.scrolled) .nav-links li a:hover {
+    color: #FFFFFF;
+  }
+  .navbar:not(.scrolled) .nav-links li a.active {
+    color: #FFFFFF;
+  }
+}
+
+.navbar:not(.scrolled) .menu-toggle:not(.active) span {
+  background: #FFFFFF;
+}
+
 /* ============================================================
    HERO SECTION
    ============================================================ */
@@ -334,9 +354,9 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(243, 241, 236, 0.15) 0%,
-    rgba(243, 241, 236, 0.05) 40%,
-    rgba(243, 241, 236, 0.3) 100%
+    rgba(30, 58, 106, 0.3) 0%,
+    rgba(30, 58, 106, 0.1) 50%,
+    rgba(30, 58, 106, 0.4) 100%
   );
   z-index: 1;
 }
@@ -351,10 +371,21 @@ button {
 }
 
 .hero-logo {
-  width: clamp(100px, 14vw, 160px);
+  display: block;
   margin-inline: auto;
-  margin-bottom: var(--space-lg);
   animation: fadeIn 1.2s var(--ease-out-expo) both;
+  filter: brightness(0) invert(1); /* Make the navy brand logos white on the dark hero background */
+}
+
+.hero-logo-monogram {
+  width: clamp(80px, 12vw, 130px);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-logo-text {
+  width: clamp(200px, 30vw, 340px);
+  margin-bottom: var(--space-lg);
+  animation-delay: 0.2s;
 }
 
 .hero-title {
