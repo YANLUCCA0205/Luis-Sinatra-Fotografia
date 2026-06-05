@@ -522,6 +522,13 @@ button {
 /* ============================================================
    ABOUT SECTION
    ============================================================ */
+#sobre {
+  background-image: url('../assets/topography.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
