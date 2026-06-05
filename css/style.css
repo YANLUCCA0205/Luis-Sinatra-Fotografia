@@ -176,7 +176,7 @@ button {
   width: 60px;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--clr-primary), transparent);
-  margin: var(--space-md) auto 0;
+  margin: 0 auto var(--space-sm);
   border: none;
 }
 
@@ -1144,32 +1144,33 @@ button {
 
 .timeline-dot {
   position: absolute;
-  top: 8px;
-  width: 16px;
-  height: 16px;
+  top: 14px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--clr-primary);
-  border: 3px solid var(--bg-dark);
-  box-shadow: 0 0 0 3px rgba(30, 58, 106, 0.25);
-  z-index: 2;
+  border: 2px solid var(--gold);
+  box-shadow: var(--shadow-card);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .timeline-item:nth-child(odd) .timeline-dot {
-  right: -8px;
+  right: -16px;
 }
 
 .timeline-item:nth-child(even) .timeline-dot {
-  left: -8px;
+  left: -16px;
 }
 
 .timeline-number {
   font-family: var(--ff-heading);
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--clr-primary);
-  opacity: 0.15;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #FFFFFF;
   line-height: 1;
-  margin-bottom: 0.5rem;
 }
 
 .timeline-content {
@@ -2053,7 +2054,7 @@ button {
   }
 
   .timeline-line {
-    left: 8px;
+    left: 16px;
     transform: none;
   }
 
@@ -2116,12 +2117,17 @@ button {
 
   .testimonial-text {
     font-size: 1rem;
-    padding: 0 var(--space-sm);
+    padding: 0 var(--space-md);
   }
 
-  .testimonial-text::before,
+  .testimonial-text::before {
+    font-size: 3rem;
+    left: -5px;
+  }
+
   .testimonial-text::after {
     font-size: 3rem;
+    right: -5px;
   }
 
   .lightbox-prev,
@@ -2213,9 +2219,14 @@ button {
     aspect-ratio: 3 / 4;
   }
 
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.72rem;
+  }
+
   .counters {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 1.5rem 1rem;
   }
 
   .counter-value {
