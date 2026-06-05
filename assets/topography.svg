@@ -2,7 +2,7 @@
   <style>
     .topo-line {
       fill: none;
-      stroke: rgba(30, 58, 106, 0.035);
+      stroke: rgba(30, 58, 106, 0.065);
       stroke-width: 1.2;
     }
   </style>
