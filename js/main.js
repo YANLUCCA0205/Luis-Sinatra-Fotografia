@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reserveBanner = document.querySelector('.reserve-banner');
   const whatsappFloat = document.querySelector('.whatsapp-float');
   const NAVBAR_HEIGHT = 70;
-  const WHATSAPP_NUMBER = '5534999860384';
+  const WHATSAPP_NUMBER = '5534998603843';
 
   // ──────────────────────────────────────────────
   // 2. Navbar Scroll Effect
