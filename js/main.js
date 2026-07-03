@@ -726,14 +726,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const message = messageField ? messageField.value.trim() : '';
 
         const waMessage = [
-          '🎥 *Nova mensagem do site — Luis Sinatra Fotografia*',
+          '*Nova mensagem do site — Luis Sinatra Fotografia*',
           '',
-          `👤 *Nome:* ${name}`,
-          `📧 *E-mail:* ${email}`,
-          `📱 *Telefone:* ${phone}`,
-          `📋 *Serviço:* ${service}`,
+          `*Nome:* ${name}`,
+          `*E-mail:* ${email}`,
+          `*Telefone:* ${phone}`,
+          `*Serviço:* ${service}`,
           '',
-          `💬 *Mensagem:*`,
+          `*Mensagem:*`,
           message,
         ].join('\n');
 
